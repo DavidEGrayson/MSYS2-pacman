@@ -40,6 +40,7 @@ scripts/libmakepkg/tidy/docs.sh.in
 scripts/libmakepkg/tidy/emptydirs.sh.in
 scripts/libmakepkg/tidy/libtool.sh.in
 scripts/libmakepkg/tidy/optipng.sh.in
+scripts/libmakepkg/tidy/msys2dir.sh.in
 scripts/libmakepkg/tidy/purge.sh.in
 scripts/libmakepkg/tidy/staticlibs.sh.in
 scripts/libmakepkg/tidy/strip.sh.in

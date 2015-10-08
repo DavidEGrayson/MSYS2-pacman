@@ -89,6 +89,7 @@ LIBMAKEPKG_IN = \
 	libmakepkg/tidy/emptydirs.sh \
 	libmakepkg/tidy/libtool.sh \
 	libmakepkg/tidy/optipng.sh \
+	libmakepkg/tidy/msys2dir.sh \
 	libmakepkg/tidy/purge.sh \
 	libmakepkg/tidy/staticlibs.sh \
 	libmakepkg/tidy/strip.sh \

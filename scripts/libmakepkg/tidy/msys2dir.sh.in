@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#   msys2dir.sh - Warn about files that contain the full Windows path to
+#   the MSYS2 installation directory, since that path will not be valid
+#   on another machine.
+#
+#   This software is released to the public domain.
+
+[[ -n "$LIBMAKEPKG_TIDY_MSYS2DIR_SH" ]] && return
+LIBMAKEPKG_TIDY_MSYS2DIR_SH=1
+
+LIBRARY=${LIBRARY:-'@libmakepkgdir@'}
+
+source "$LIBRARY/util/message.sh"
+source "$LIBRARY/util/option.sh"
+
+packaging_options+=('msys2dir')
+tidy_remove+=('tidy_msys2dir')
+
+tidy_msys2dir() {
+	if check_option "msys2dir" "y"; then
+		msg2 "$(gettext "Checking for MSYS2 directory.")"
+		local l
+		while read -rd '' l; do
+                    echo $l
+		done < <(find . ! -type d -print0)
+	fi
+}
